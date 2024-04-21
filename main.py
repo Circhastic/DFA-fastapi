@@ -15,7 +15,7 @@ app.add_middleware(
 def home():
     return {"message": "RegEx Wizard"}
 
-@app.get("/check_word/{selected_dfa}/{given_word}")
+@app.get("/check-word/{selected_dfa}/{given_word}")
 def check_word(selected_dfa: str = Path(description="User selected DFA"), given_word: str = Path(description="The word to be checked")):
 
     JSON_FILE = "dfa_selection.json"
